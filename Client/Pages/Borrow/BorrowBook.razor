@@ -1,0 +1,26 @@
+﻿@page "/borrow-book"
+<PageTitle>Borrow Book</PageTitle>
+<header class="header d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-3">
+        <button id="sidebarToggle" class="btn btn-ghost btn-sm d-lg-none">☰</button>
+        <h4 class="mb-0">Borrowed Books</h4>
+    </div>
+</header>
+<div class="card p-3">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle">
+            <thead class="table-light">
+                <tr><th>Book</th><th>Borrower</th><th>Date Borrowed</th><th>Due Date</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Great Gatsby</td>
+                    <td>John Doe</td>
+                    <td>2025-10-01</td>
+                    <td>2025-10-15</td>
+                    <td><button class="btn btn-sm btn-outline-success">Mark Returned</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
