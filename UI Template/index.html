@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyLibrary — Professional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="d-flex">
+  
+<div id="sidebar" class="sidebar d-flex flex-column">
+  <div class="mb-4">
+    <div class="brand">📚 MyLibrary</div>
+    <div class="text-white-50 small mt-1">Library Management</div>
+  </div>
+  <nav class="nav flex-column">
+    <a class="nav-link active mb-1" href="index.html">Dashboard</a>
+    <a class="nav-link mb-1" href="books.html">Books</a>
+    <a class="nav-link mb-1" href="borrow.html">Borrowed</a>
+    <a class="nav-link mb-1" href="add-book.html">Add Book</a>
+    <a class="nav-link mt-3" href="login.html">Logout</a>
+  </nav>
+  <div class="mt-auto small text-white-50">v1.0 • © MyLibrary</div>
+</div>
+
+  <div class="flex-fill">
+    <header class="header d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-3">
+        <button id="sidebarToggle" class="btn btn-ghost btn-sm d-lg-none">☰</button>
+        <h4 class="mb-0">Dashboard</h4>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <div class="text-muted small">Welcome, Admin</div>
+        <div class="dropdown">
+          <a class="btn btn-sm btn-outline-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Settings</a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Preferences</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="container-fluid main">
+      <div class="row g-4">
+        <div class="col-12 col-lg-8">
+          <div class="card p-4 card-hero">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <h3 class="mb-1">Library Overview</h3>
+                <p class="text-muted">Quick stats and recent activity</p>
+                <div class="d-flex gap-3 mt-3">
+                  <div class="p-3 bg-white rounded-3 border text-center" style="min-width:120px;">
+                    <div class="text-muted small">Total Books</div>
+                    <div class="fs-4 fw-bold">1,245</div>
+                  </div>
+                  <div class="p-3 bg-white rounded-3 border text-center" style="min-width:120px;">
+                    <div class="text-muted small">Borrowed</div>
+                    <div class="fs-4 fw-bold text-danger">112</div>
+                  </div>
+                </div>
+              </div>
+              <div style="min-width:180px;">
+                <img src="assets/img/library-hero.svg" alt="hero" style="width:160px; opacity:0.95;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card p-3">
+            <h6 class="mb-2">Quick Actions</h6>
+            <div class="d-grid gap-2">
+              <a href="add-book.html" class="btn btn-primary">Add New Book</a>
+              <a href="books.html" class="btn btn-outline-secondary">Manage Books</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="card p-3">
+            <h6 class="mb-3">Recent Borrowed</h6>
+            <div class="table-responsive">
+              <table class="table align-middle">
+                <thead class="table-light">
+                  <tr><th>Book</th><th>Borrower</th><th>Date</th><th>Due</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>The Great Gatsby</td><td>John Doe</td><td>2025-10-01</td><td>2025-10-15</td></tr>
+                  <tr><td>1984</td><td>Jane Smith</td><td>2025-09-25</td><td>2025-10-09</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+<div id="overlay" class="content-overlay"></div>
+<div id="toastWrap" style="position:fixed; right:1rem; top:1rem; z-index:2000;"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
