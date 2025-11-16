@@ -12,7 +12,7 @@ using Server.Data;
 namespace Server.Migrations
 {
     [DbContext(typeof(MyLibraryContext))]
-    [Migration("20251020144326_CreateDB")]
+    [Migration("20251116100529_CreateDB")]
     partial class CreateDB
     {
         /// <inheritdoc />
@@ -70,6 +70,23 @@ namespace Server.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("c9e38b7c-6a8d-4dbc-b80d-9106f7581534"),
+                            Name = "Science Fiction"
+                        },
+                        new
+                        {
+                            Id = new Guid("c7c25e71-1522-443f-b8ac-a0973ee5c7c8"),
+                            Name = "Fantasy"
+                        },
+                        new
+                        {
+                            Id = new Guid("d2a3c710-ce95-4099-85e8-5e77d5dbdd2b"),
+                            Name = "Mystery"
+                        });
                 });
 
             modelBuilder.Entity("Server.Entities.Book", b =>

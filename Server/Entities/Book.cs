@@ -15,6 +15,12 @@ namespace Server.Entities
         [Required]
         [StringLength(500)]
         public string Description { get; set; }
+        [Required]
+        public string BookCoverUrl { get; set; }
+        [Required]
+        public int TotalCopies { get; set; }
+        [Required]
+        public int AvailableCopies { get; set; }
 
         [Required]
         public Guid CategoryId { get; set; }
